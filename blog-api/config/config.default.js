@@ -28,7 +28,7 @@ module.exports = appInfo => {
   userConfig.mysql = {
     client:{
       host:'localhost',
-      port:55002,
+      port:55000,
       user:'root',
       password:'root',
       database:'cms'

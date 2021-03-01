@@ -5,4 +5,5 @@ module.exports=class Controller extends BaseController {
         super(...args);
         this.model = 'user'
     }
+   
 }

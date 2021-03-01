@@ -1,2 +1,24 @@
 ### 获取
 GET http://localhost:7001/api/resource
+
+### 资源获取
+GET http://localhost:7001/api/role/getResource
+
+###
+POST http://localhost:7001/api/role/setResource
+Content-Type: application/json
+
+{
+    "roleId":"1",
+    "resourceIds":[1,2,3]
+}
+
+
+###
+POST http://localhost:7001/api/role/setUser
+Content-Type: application/json
+
+{
+    "roleId":"1",
+    "userIds":[1,2,3]
+}
