@@ -1,0 +1,32 @@
+###
+
+post http://localhost:7001/api/user 
+Content-Type: application/json
+
+{
+    "username":"zhangsan",
+    "password":"123456",
+    "email":"123332211@qq.com",
+    "phone":"19234583456",
+    "gender":0
+}
+
+### 获取
+GET http://localhost:7001/api/user&pageNum=1&pageSize=1&username=1
+
+### 修改
+
+PATCH http://localhost:7001/api/user/799a0c2a-953e-4f72-9001-d3925de39502
+Content-Type: application/json
+
+{
+    "username":"zhangsan4",
+    "password":"123456",
+    "email":"123332211@qq.com",
+    "phone":"19234583456",
+    "gender":0
+
+}
+
+### 删除
+DELETE http://localhost:7001/api/user/3

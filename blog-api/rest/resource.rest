@@ -1,0 +1,2 @@
+### 获取
+GET http://localhost:7001/api/resource

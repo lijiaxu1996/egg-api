@@ -1,0 +1,11 @@
+### 获取
+GET http://localhost:7001/api/role
+
+
+###
+post http://localhost:7001/api/role
+Content-Type: application/json
+
+{
+    "name":"订阅者"
+}
