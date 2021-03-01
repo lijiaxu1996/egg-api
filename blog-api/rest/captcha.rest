@@ -1,0 +1,11 @@
+
+###
+GET http://localhost:7001/api/captcha
+
+###
+POST http://localhost:7001/api/checkCaptcha
+Content-Type: application/json
+
+{
+    "captcha":"yzgu"
+}

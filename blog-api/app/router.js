@@ -16,4 +16,12 @@ module.exports = app => {
   router.post('/api/role/setResource',controller.role.setResource);
   router.get('/api/role/getUser',controller.role.getUser);
   router.post('/api/role/setUser',controller.role.setUser);
+
+  //定义验证码
+  router.get('/api/captcha',controller.user.captcha);
+  // 检查验证码
+  router.post('/api/checkCaptcha',controller.user.checkCaptcha);
+  //注册 登录 接口实现
+  router.post('/signup',controller.user.signup);
+  router.post('/signin',controller.user.signin);
 }

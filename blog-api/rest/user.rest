@@ -29,3 +29,30 @@ Content-Type: application/json
 
 ### 删除
 DELETE http://localhost:7001/api/user/3
+
+
+### 注册
+POST http://localhost:7001/signup
+Content-Type: application/json
+
+{
+    "username":"zhaoliu",
+    "password":"123456",
+    "email":"123332211@qq.com",
+    "phone":"19234583456",
+    "gender":0
+}
+
+###
+POST http://localhost:7001/signin
+Content-Type: application/json
+
+{
+    "username":"zhangsan",
+    "password":"123456"
+}
+
+###
+GET http://localhost:7001/api/role/getUser
+Content-Type: application/json
+Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJ6aGFuZ3NhbiIsInBob25lIjoiMTkyMzQ1ODM0NTYiLCJlbWFpbCI6IjEyMzMzMjIxMUBxcS5jb20iLCJnZW5kZXIiOjAsInV1aWQiOm51bGwsImlhdCI6MTYxNDYxMjU1Nn0.1P8nHuylReoPIkQp0c5G8n6CF8AhP8RhrojTq3SR5jQ"
