@@ -18,11 +18,12 @@ module.exports = (options, app) => {
             const authorization = ctx.get('authorization');
             if (authorization) {
                 try {
-                    const user = await verifyToken(authorization, app.config.secret);
+                    const user = await verifyToken(authorization, app.config.jwtSecret);
                     ctx.session.user = user;
                     await next();
                 } catch (error) {
                     ctx.status = 401;
+                    console.log(error);
                     ctx.body = 'Token 验证失败'
                 }
 
@@ -35,3 +36,25 @@ module.exports = (options, app) => {
         }
     }
 }
+// module.exports = (options, app) => {
+//     return async function (ctx, next) {
+//         //权限判断
+//             const authorization = ctx.get('authorization');
+//             if (authorization) {
+//                 try {
+//                     const user = await verifyToken(authorization, app.config.jwtSecret);
+//                     ctx.session.user = user;
+//                     await next();
+//                 } catch (error) {
+//                     ctx.status = 401;
+//                     console.log(error);
+//                     ctx.body = 'Token 验证失败'
+//                 }
+
+//             } else {
+//                 ctx.status = 401;
+//                 ctx.body = '没有Token'
+//             }
+        
+//     }
+// }

@@ -18,6 +18,7 @@ module.exports=class Controller extends BaseController {
     async getUser(){
         const {ctx,service} = this;
         ctx.body = await service.role.getUser()
+        console.log( ctx.session.user );
     }
     async setUser() {
         const {ctx,service} = this;

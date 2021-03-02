@@ -24,4 +24,6 @@ module.exports = app => {
   //注册 登录 接口实现
   router.post('/signup',controller.user.signup);
   router.post('/signin',controller.user.signin);
+  router.post('/signout',controller.user.signout);
+
 }
