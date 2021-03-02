@@ -13,6 +13,9 @@ https://www.bilibili.com/video/BV1v54y1y7V1?p=2
 - JWT权限校验
 
 ### 完成接口:
+```javascript
+
+
   router.get('/', controller.home.index);
   router.resources('user','/api/user',controller.user);
   router.resources('role','/api/role',controller.role);
@@ -33,3 +36,4 @@ https://www.bilibili.com/video/BV1v54y1y7V1?p=2
   router.post('/signup',controller.user.signup);
   router.post('/signin',controller.user.signin);
   router.post('/signout',controller.user.signout);
+```
